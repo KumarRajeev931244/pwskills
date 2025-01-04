@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color:blueviolet;
+        }
+        .counterContainer{
+            text-align: center;
+        }
+        button{
+            cursor: pointer;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="counterContainer">
+        <h1>counter app</h1>
+    <h1 id="counter">0</h1> 
+    <div class="button">
+        <button id="dec">Decrement by 1</button>        
+        <button id="inc">Incresed by one</button><br>
+        <button id="reset">Reset value</button>
+    </div> 
+    </div>     
+        
+    
+</body>
+<script>
+    let counter = 0
+    function display(){
+        document.getElementById('counter').innerText = counter
+
+    }
+    
+
+    document.getElementById('inc').addEventListener('click', () =>{
+        counter++; 
+        display()
+    })
+    document.getElementById('dec').addEventListener('click', () => {
+        counter--;
+        display()
+    })
+    document.getElementById('reset').addEventListener('click', () => {
+        counter = 0;
+        display()
+    })
+      
+</script>
+</html>
